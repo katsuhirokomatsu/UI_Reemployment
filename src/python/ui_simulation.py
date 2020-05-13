@@ -508,7 +508,7 @@ class Counterfactual:
 		while fun(tau_max) < 0:
 			tau_max = tau_max * 1.1
 
-		tau = bisect(fun, a = 0, b = 0.05)
+		tau = bisect(fun, a = 0, b = tau_max)
 		return tau
 
 	def compute_MU_unemployed(self, sol, t_end = 26):
